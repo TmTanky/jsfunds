@@ -5,11 +5,15 @@
 // Output : I Am Joshua
 
 const sentence =
-	"hello there, i am joshua chu and i need you to capitalize each word's first letter in order to become the best programmer in the world.";
+	"hello there, i am dinmarc paredes and i need you to capitalize each word's first letter in order to become the best programmer in the world."
 
 export const capitalizeFunc = (sentence) => {
 	// Code here
-	return 0;
-};
+	const stringArr = sentence.split(' ')
+	const result = stringArr.map((word) => {
+		return word.charAt(0).toUpperCase() + word.slice(1)
+	})
+	return result.join(' ')
+}
 
-console.log(capitalizeFunc(sentence));
+console.log(capitalizeFunc(sentence))
