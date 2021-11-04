@@ -1,4 +1,4 @@
-// Description: Create a function that accepts an array and add each all elements that are greater than the previous elements before it and subtracts it if it is lesser.
+// Description: Create a function that accepts an array and add each all elements that are greater than the previous elements before it and subtracts it if it is lesser or equal to the current element.
 
 // Input: [1, 2, 2, 3, 1, 4, 3, 5]
 
