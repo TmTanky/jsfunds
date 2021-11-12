@@ -13,7 +13,11 @@ const url = "http://localhost:1337/api?firstname=joshua&lastname=chu&age=21";
 
 export const urlParser = (url) => {
 	// Code here
-	return 0;
+	const parseUrl = url.match(/\?(.*)/)[1].split('&')
+	const data = parseUrl.map(item => item.split('=')).map(item => {
+		return {[item[0]]: item[1]}
+	})
+	return Object.assign({}, ...data);
 };
 
 console.log(urlParser(url));
