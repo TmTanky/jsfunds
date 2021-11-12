@@ -32,12 +32,16 @@ const alphabetMap = {
 	w: 23,
 	x: 24,
 	y: 25,
-	z: 26,
-};
+	z: 26
+}
 
 export const wordNumValue = (target, alphabetMap) => {
 	// code here
-	return 0;
-};
+	const result = target
+		.split('')
+		.map((letter) => alphabetMap[letter.toLowerCase()])
+		.reduce((acc, curr) => acc + curr)
+	return result
+}
 
-console.log(wordNumValue("KnoWlEdGe", alphabetMap));
+console.log(wordNumValue('KnoWlEdGe', alphabetMap))
