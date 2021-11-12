@@ -7,8 +7,11 @@
 const arrString = "1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9";
 
 export const commaSum = (arrString) => {
-	//Code here
-	return 0;
+    const toStringArr = arrString.split(' ')
+    const toNumber = toStringArr.map(str => parseFloat(str))
+    return toNumber.reduce((accu, curr) => {
+        return accu + curr
+    }, 0)
 };
 
 console.log(commaSum(arrString));
